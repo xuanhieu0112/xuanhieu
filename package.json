@@ -12,6 +12,7 @@
     "start": "gulp serve"
   },
   "devDependencies": {
+    "browser-sync": "^2.26.13",
     "es6-promise": "^4.2.8",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
@@ -21,14 +22,13 @@
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.2",
-    "browser-sync": "^2.26.7"
+    "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^6.0.0",
     "gulp-minify-html": "^1.0.6",
     "gulp-uglify-es": "^2.0.0",
-    "pm2": "^4.2.3"
+    "pm2": "^4.5.0"
   }
 }

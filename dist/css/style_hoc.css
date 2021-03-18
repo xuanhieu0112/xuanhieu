@@ -1,0 +1,824 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a,
+ins {
+	display: inline-block;
+	text-decoration: none;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+input,
+button,
+select,
+option {
+	border: none;
+	outline: none;
+	background: none;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.p-center {
+	place-items: center;
+}
+
+.j-between {
+	justify-content: space-between;
+}
+
+.a-center {
+	align-items: center;
+}
+
+.j-center {
+	justify-content: center;
+}
+
+.t-center {
+	text-align: center;
+}
+
+.a-start {
+	align-items: flex-start;
+}
+
+.j-start {
+	justify-content: flex-start;
+}
+
+.a-end {
+	align-items: flex-end;
+}
+
+.j-end {
+	justify-content: flex-end;
+}
+
+.j-around {
+	justify-content: space-around;
+}
+
+.font {
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Raleway', sans-serif;
+	font-family: 'Oswald', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.wrap {
+	flex-wrap: wrap;
+}
+
+.grid {
+	display: grid;
+}
+
+.ws_nowrap {
+	white-space: nowrap;
+}
+
+.row {
+	display: flex;
+	margin: 0 -15px;
+	flex-wrap: wrap;
+}
+
+.row div[class^='col'] {
+	padding: 0 15px;
+}
+
+.container {
+	max-width: 1120px;
+	margin: 0 auto;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.exercise-1,
+.exercise-2,
+.exercise-3,
+.exercise-4,
+.exercise-5 {
+	margin-top: 100px;
+}
+
+.exercise-1 .container h3,
+.exercise-2 .container h3,
+.exercise-3 .container h3,
+.exercise-4 .container h3,
+.exercise-5 .container h3 {
+	margin-bottom: 20px;
+}
+
+.exercise-1 .container .big-rectangle {
+	position: relative;
+	left: 50%;
+	width: 50vmin;
+	height: 30vmin;
+	transform: translateX(-50%);
+	border: 1px solid #74b316;
+	background: white;
+}
+
+.exercise-1 .container .big-rectangle .small-rectangle {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 70%;
+	width: 50%;
+	height: 50%;
+	transform: translateY(-50%);
+	border: 1px solid #74b316;
+	background: white;
+}
+
+.exercise-2 .container .login {
+	width: 400px;
+	margin: 0 auto;
+}
+
+.exercise-2 .container .login h3 {
+	font-size: 30px;
+	font-weight: normal;
+	position: relative;
+	z-index: 2;
+	text-align: center;
+	text-transform: uppercase;
+	color: #333;
+}
+
+.exercise-2 .container .login h3::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100px;
+	height: 20px;
+	content: '';
+	transform: translateX(-50%);
+	opacity: .7;
+	background: #9c35e6;
+}
+
+.exercise-2 .container .login form {
+	margin-bottom: 20px;
+}
+
+.exercise-2 .container .login form .input-group {
+	margin: 20px 0;
+}
+
+.exercise-2 .container .login form .input-group label {
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #333;
+}
+
+.exercise-2 .container .login form .input-group label span {
+	color: red;
+}
+
+.exercise-2 .container .login form .input-group .inp-icon {
+	width: 100%;
+	margin-top: 10px;
+	border: 1px solid #b1b1b1;
+	border-radius: 3px;
+}
+
+.exercise-2 .container .login form .input-group .inp-icon i {
+	padding: 0 15px;
+	border-right: 1px solid rgba(128, 128, 128, .5);
+}
+
+.exercise-2 .container .login form .input-group .inp-icon input {
+	width: 100%;
+	padding: 17px 15px;
+}
+
+.exercise-2 .container .login form .input-group .inp-icon span {
+	display: inline-block;
+	padding-right: 17px;
+}
+
+.exercise-2 .container .login form .confirm {
+	margin-bottom: 20px;
+}
+
+.exercise-2 .container .login form .confirm .checkbox input {
+	opacity: 0;
+}
+
+.exercise-2 .container .login form .confirm .checkbox input:checked + label::after {
+	opacity: 1;
+}
+
+.exercise-2 .container .login form .confirm .checkbox label {
+	font-size: 14px;
+	font-weight: 600;
+	position: relative;
+	margin: 5px;
+	letter-spacing: .5px;
+	text-transform: uppercase;
+	color: #333;
+}
+
+.exercise-2 .container .login form .confirm .checkbox label::before {
+	position: absolute;
+	top: 0;
+	left: -22.5px;
+	width: 14.5px;
+	height: 14.5px;
+	content: '';
+	border: 1px solid rgba(128, 128, 128, .8);
+	background: white;
+}
+
+.exercise-2 .container .login form .confirm .checkbox label::after {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 700;
+	position: absolute;
+	top: 1px;
+	left: -21px;
+	content: '\f00c';
+	opacity: 0;
+	color: #9c35e6;
+}
+
+.exercise-2 .container .login form .confirm .forgot a {
+	font-size: 14px;
+	font-weight: 500;
+	transition: all .3s;
+	color: #4d96b3;
+}
+
+.exercise-2 .container .login form .confirm .forgot a:hover {
+	color: #9c35e6;
+}
+
+.exercise-2 .container .login form .btn-login {
+	text-align: center;
+}
+
+.exercise-2 .container .login form .btn-login a {
+	font-weight: 600;
+	padding: 12px 25px;
+	transition: all .3s;
+	letter-spacing: .5px;
+	text-transform: uppercase;
+	color: #333;
+	border-radius: 4px;
+	background: rgba(156, 53, 230, .7);
+}
+
+.exercise-2 .container .login form .btn-login a:hover {
+	letter-spacing: 2px;
+}
+
+.exercise-5 .container a {
+	font-weight: bold;
+	display: block;
+	margin: 50px 0 70px;
+	text-transform: uppercase;
+	color: #74b316;
+}
+
+@media screen and (min-width: 320px) {
+
+.row html {
+	font-size: .85rem;
+}
+
+.row .col-1 {
+	width: 8.33333%;
+}
+
+.row .col-5 {
+	width: 20%;
+}
+
+.row .col-2 {
+	width: 16.66667%;
+}
+
+.row .col-5 {
+	width: 20%;
+}
+
+.row .col-3 {
+	width: 25%;
+}
+
+.row .col-5 {
+	width: 20%;
+}
+
+.row .col-4 {
+	width: 33.33333%;
+}
+
+.row .col-5 {
+	width: 20%;
+}
+
+.row .col-5 {
+	width: 41.66667%;
+}
+
+.row .col-5 {
+	width: 20%;
+}
+
+.row .col-6 {
+	width: 50%;
+}
+
+.row .col-5 {
+	width: 20%;
+}
+
+.row .col-7 {
+	width: 58.33333%;
+}
+
+.row .col-5 {
+	width: 20%;
+}
+
+.row .col-8 {
+	width: 66.66667%;
+}
+
+.row .col-5 {
+	width: 20%;
+}
+
+.row .col-9 {
+	width: 75%;
+}
+
+.row .col-5 {
+	width: 20%;
+}
+
+.row .col-10 {
+	width: 83.33333%;
+}
+
+.row .col-5 {
+	width: 20%;
+}
+
+.row .col-11 {
+	width: 91.66667%;
+}
+
+.row .col-5 {
+	width: 20%;
+}
+
+.row .col-12 {
+	width: 100%;
+}
+
+.row .col-5 {
+	width: 20%;
+}
+
+}
+
+@media screen and (min-width: 576px) {
+
+.row html {
+	font-size: .9rem;
+}
+
+.row .col-sm-1 {
+	width: 8.33333%;
+}
+
+.row .col-sm-5 {
+	width: 20%;
+}
+
+.row .col-sm-2 {
+	width: 16.66667%;
+}
+
+.row .col-sm-5 {
+	width: 20%;
+}
+
+.row .col-sm-3 {
+	width: 25%;
+}
+
+.row .col-sm-5 {
+	width: 20%;
+}
+
+.row .col-sm-4 {
+	width: 33.33333%;
+}
+
+.row .col-sm-5 {
+	width: 20%;
+}
+
+.row .col-sm-5 {
+	width: 41.66667%;
+}
+
+.row .col-sm-5 {
+	width: 20%;
+}
+
+.row .col-sm-6 {
+	width: 50%;
+}
+
+.row .col-sm-5 {
+	width: 20%;
+}
+
+.row .col-sm-7 {
+	width: 58.33333%;
+}
+
+.row .col-sm-5 {
+	width: 20%;
+}
+
+.row .col-sm-8 {
+	width: 66.66667%;
+}
+
+.row .col-sm-5 {
+	width: 20%;
+}
+
+.row .col-sm-9 {
+	width: 75%;
+}
+
+.row .col-sm-5 {
+	width: 20%;
+}
+
+.row .col-sm-10 {
+	width: 83.33333%;
+}
+
+.row .col-sm-5 {
+	width: 20%;
+}
+
+.row .col-sm-11 {
+	width: 91.66667%;
+}
+
+.row .col-sm-5 {
+	width: 20%;
+}
+
+.row .col-sm-12 {
+	width: 100%;
+}
+
+.row .col-sm-5 {
+	width: 20%;
+}
+
+}
+
+@media screen and (min-width: 786px) {
+
+.row html {
+	font-size: .9rem;
+}
+
+.row .col-md-1 {
+	width: 8.33333%;
+}
+
+.row .col-md-5 {
+	width: 20%;
+}
+
+.row .col-md-2 {
+	width: 16.66667%;
+}
+
+.row .col-md-5 {
+	width: 20%;
+}
+
+.row .col-md-3 {
+	width: 25%;
+}
+
+.row .col-md-5 {
+	width: 20%;
+}
+
+.row .col-md-4 {
+	width: 33.33333%;
+}
+
+.row .col-md-5 {
+	width: 20%;
+}
+
+.row .col-md-5 {
+	width: 41.66667%;
+}
+
+.row .col-md-5 {
+	width: 20%;
+}
+
+.row .col-md-6 {
+	width: 50%;
+}
+
+.row .col-md-5 {
+	width: 20%;
+}
+
+.row .col-md-7 {
+	width: 58.33333%;
+}
+
+.row .col-md-5 {
+	width: 20%;
+}
+
+.row .col-md-8 {
+	width: 66.66667%;
+}
+
+.row .col-md-5 {
+	width: 20%;
+}
+
+.row .col-md-9 {
+	width: 75%;
+}
+
+.row .col-md-5 {
+	width: 20%;
+}
+
+.row .col-md-10 {
+	width: 83.33333%;
+}
+
+.row .col-md-5 {
+	width: 20%;
+}
+
+.row .col-md-11 {
+	width: 91.66667%;
+}
+
+.row .col-md-5 {
+	width: 20%;
+}
+
+.row .col-md-12 {
+	width: 100%;
+}
+
+.row .col-md-5 {
+	width: 20%;
+}
+
+}
+
+@media screen and (min-width: 922px) {
+
+.row html {
+	font-size: 1rem;
+}
+
+.row .col-lg-1 {
+	width: 8.33333%;
+}
+
+.row .col-lg-5 {
+	width: 20%;
+}
+
+.row .col-lg-2 {
+	width: 16.66667%;
+}
+
+.row .col-lg-5 {
+	width: 20%;
+}
+
+.row .col-lg-3 {
+	width: 25%;
+}
+
+.row .col-lg-5 {
+	width: 20%;
+}
+
+.row .col-lg-4 {
+	width: 33.33333%;
+}
+
+.row .col-lg-5 {
+	width: 20%;
+}
+
+.row .col-lg-5 {
+	width: 41.66667%;
+}
+
+.row .col-lg-5 {
+	width: 20%;
+}
+
+.row .col-lg-6 {
+	width: 50%;
+}
+
+.row .col-lg-5 {
+	width: 20%;
+}
+
+.row .col-lg-7 {
+	width: 58.33333%;
+}
+
+.row .col-lg-5 {
+	width: 20%;
+}
+
+.row .col-lg-8 {
+	width: 66.66667%;
+}
+
+.row .col-lg-5 {
+	width: 20%;
+}
+
+.row .col-lg-9 {
+	width: 75%;
+}
+
+.row .col-lg-5 {
+	width: 20%;
+}
+
+.row .col-lg-10 {
+	width: 83.33333%;
+}
+
+.row .col-lg-5 {
+	width: 20%;
+}
+
+.row .col-lg-11 {
+	width: 91.66667%;
+}
+
+.row .col-lg-5 {
+	width: 20%;
+}
+
+.row .col-lg-12 {
+	width: 100%;
+}
+
+.row .col-lg-5 {
+	width: 20%;
+}
+
+}
+
+@media screen and (min-width: 1200px) {
+
+.row html {
+	font-size: 1rem;
+}
+
+.row .col-xl-1 {
+	width: 8.33333%;
+}
+
+.row .col-xl-5 {
+	width: 20%;
+}
+
+.row .col-xl-2 {
+	width: 16.66667%;
+}
+
+.row .col-xl-5 {
+	width: 20%;
+}
+
+.row .col-xl-3 {
+	width: 25%;
+}
+
+.row .col-xl-5 {
+	width: 20%;
+}
+
+.row .col-xl-4 {
+	width: 33.33333%;
+}
+
+.row .col-xl-5 {
+	width: 20%;
+}
+
+.row .col-xl-5 {
+	width: 41.66667%;
+}
+
+.row .col-xl-5 {
+	width: 20%;
+}
+
+.row .col-xl-6 {
+	width: 50%;
+}
+
+.row .col-xl-5 {
+	width: 20%;
+}
+
+.row .col-xl-7 {
+	width: 58.33333%;
+}
+
+.row .col-xl-5 {
+	width: 20%;
+}
+
+.row .col-xl-8 {
+	width: 66.66667%;
+}
+
+.row .col-xl-5 {
+	width: 20%;
+}
+
+.row .col-xl-9 {
+	width: 75%;
+}
+
+.row .col-xl-5 {
+	width: 20%;
+}
+
+.row .col-xl-10 {
+	width: 83.33333%;
+}
+
+.row .col-xl-5 {
+	width: 20%;
+}
+
+.row .col-xl-11 {
+	width: 91.66667%;
+}
+
+.row .col-xl-5 {
+	width: 20%;
+}
+
+.row .col-xl-12 {
+	width: 100%;
+}
+
+.row .col-xl-5 {
+	width: 20%;
+}
+
+}
+

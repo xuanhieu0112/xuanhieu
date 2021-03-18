@@ -1,0 +1,81 @@
+@import "media";
+@import "variables";
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 (-$gutter / 2);
+
+  div[class^="col"] {
+    padding: 0 ($gutter / 2);
+  }
+
+  @include rs-xs {
+    html {
+      font-size: 0.85rem;
+    }
+    @for $i from 1 through 12 {
+      .col-#{$i} {
+        width: 100%/ (12 / $i);
+      }
+      .col-5 {
+        width: 20%;
+      }
+    }
+  }
+
+  @include rs-sm {
+    html {
+      font-size: 0.9rem;
+    }
+    @for $i from 1 through 12 {
+      .col-sm-#{$i} {
+        width: 100%/ (12 / $i);
+      }
+      .col-sm-5 {
+        width: 20%;
+      }
+    }
+  }
+
+  @include rs-md {
+    html {
+      font-size: 0.9rem;
+    }
+    @for $i from 1 through 12 {
+      .col-md-#{$i} {
+        width: 100%/ (12 / $i);
+      }
+      .col-md-5 {
+        width: 20%;
+      }
+    }
+  }
+
+  @include rs-lg {
+    html {
+      font-size: 1rem;
+    }
+    @for $i from 1 through 12 {
+      .col-lg-#{$i} {
+        width: 100%/ (12 / $i);
+      }
+      .col-lg-5 {
+        width: 20%;
+      }
+    }
+  }
+  @include rs-xl {
+    html {
+      font-size: 1rem;
+    }
+    @for $i from 1 through 12 {
+      .col-xl-#{$i} {
+        width: 100%/ (12 / $i);
+      }
+      .col-xl-5 {
+        width: 20%;
+      }
+    }
+  }
+}

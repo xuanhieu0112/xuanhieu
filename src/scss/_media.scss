@@ -1,0 +1,35 @@
+$xs: 320px; //extra small
+$sm: 576px; //small
+$md: 786px; //medium
+$lg: 922px; //large
+$xl: 1200px; //extra large
+
+@mixin rs-xs {
+  @media screen and (min-width: $xs) {
+    @content;
+  }
+}
+
+@mixin rs-sm {
+  @media screen and (min-width: $sm) {
+    @content;
+  }
+}
+
+@mixin rs-md {
+  @media screen and (min-width: $md) {
+    @content;
+  }
+}
+
+@mixin rs-lg {
+  @media screen and (min-width: $lg) {
+    @content;
+  }
+}
+
+@mixin rs-xl {
+  @media screen and (min-width: $xl) {
+    @content;
+  }
+}
